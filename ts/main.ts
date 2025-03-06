@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 重置图片预览和表单
     console.log('Data saved to localStorage:', data);
 
-    photoPreview.src = 'images/placeholder-image-square.jpg';
+    photoPreview.src = 'images/placeholder-image.jpg';
     form.reset();
   });
 });

@@ -11,6 +11,7 @@
       integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -27,28 +28,38 @@
         </nav>
       </div>
     </header>
+    <!-- Below the header, create the HTML for the form that creates a journal entry in
+     the data-view="entry-form" element.  -->
     <main class="container">
-      <div data-view="entry-form">
-        <form>
-          <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title" required />
+      <div>
+        <form data-view="entry-form">
+          <img
+            id="photo-preview"
+            src="../images/placeholder-image-square.jpg"
+            alt="Photo Preview" />
+
+          <div class="combine">
+            <div class="form-group1">
+              <label for="title">Title</label>
+              <input type="text" id="title" name="title" required />
+            </div>
+
+            <div class="form-group1">
+              <label for="photo-url">Photo URL</label>
+              <input type="url" id="photo-url" name="photo-url" required />
+            </div>
           </div>
-          <div class="form-group">
-            <label for="photo-url">Photo URL</label>
-            <input type="url" id="photo-url" name="photo-url" required />
-          </div>
-          <div class="form-group">
+
+          <div class="form-group" id="footer">
             <label for="notes">Notes</label>
             <textarea id="notes" name="notes" required></textarea>
+            <div class="button-container">
+              <button type="submit">Save</button>
+            </div>
           </div>
-          <button type="submit">Save Entry</button>
         </form>
-        <img
-          id="photo-preview"
-          src="../images/placeholder-image-square.jpg"
-          alt="Photo Preview" />
       </div>
+
       <div data-view="entries" class="hidden">
         <!-- Entries will be dynamically inserted here -->
       </div>
